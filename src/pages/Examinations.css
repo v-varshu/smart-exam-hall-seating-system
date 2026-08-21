@@ -1,0 +1,581 @@
+/* =====================================================
+   SMART EXAM SEATING - EXAMINATIONS PAGE
+===================================================== */
+
+.examinations-page {
+    min-height: 100vh;
+    padding: 36px 42px;
+    background: #f4f7fb;
+    color: #172033;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.exam-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.exam-topbar h1 {
+    margin: 0;
+    color: #111827;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.exam-topbar p {
+    margin: 7px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.back-btn {
+    border: 1px solid #d9e1ec;
+    background: #ffffff;
+    color: #334155;
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: #f8fbff;
+}
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.exam-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.exam-stat-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 21px;
+
+    background: #ffffff;
+    border: 1px solid #e6ebf2;
+    border-radius: 14px;
+
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.045);
+
+    transition: all 0.2s ease;
+}
+
+.exam-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eaf2ff;
+    font-size: 21px;
+}
+
+.today-icon {
+    background: #eafaf3;
+}
+
+.subject-icon {
+    background: #fff4e6;
+}
+
+.dept-icon {
+    background: #f1edff;
+}
+
+.exam-stat-card span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.exam-stat-card strong {
+    color: #111827;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   COMMON CARDS
+===================================================== */
+
+.exam-form-card,
+.today-exam-card,
+.all-exams-card {
+    margin-bottom: 24px;
+
+    padding: 27px;
+
+    background: #ffffff;
+    border: 1px solid #e6ebf2;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.045);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #172033;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 6px 0 0;
+
+    color: #718096;
+    font-size: 13px;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.exam-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #1f2937;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: all 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #9aa5b4;
+}
+
+.input-group input:hover,
+.input-group select:hover {
+    border-color: #b9c6d6;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.09);
+}
+
+/* =====================================================
+   FORM BUTTONS
+===================================================== */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 26px;
+    padding-top: 21px;
+
+    border-top: 1px solid #eef1f5;
+}
+
+.create-exam-btn {
+    border: none;
+
+    padding: 12px 21px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+
+    transition: all 0.2s ease;
+}
+
+.create-exam-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.cancel-btn {
+    padding: 11px 20px;
+
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #f8fafc;
+}
+
+/* =====================================================
+   TODAY'S EXAM
+===================================================== */
+
+.today-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.today-exam-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 16px 18px;
+
+    border: 1px solid #e5eaf1;
+    border-radius: 11px;
+
+    background: #fbfdff;
+
+    transition: all 0.2s ease;
+}
+
+.today-exam-item:hover {
+    border-color: #cbd9ee;
+    background: #f8fbff;
+}
+
+.exam-date-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eaf2ff;
+
+    font-size: 20px;
+}
+
+.today-exam-info {
+    flex: 1;
+}
+
+.today-exam-info h3 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.today-exam-info p {
+    margin: 0 0 5px;
+
+    color: #64748b;
+    font-size: 13px;
+}
+
+.today-exam-info span {
+    color: #475569;
+    font-size: 12px;
+}
+
+.allocate-btn {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: #0f766e;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.allocate-btn:hover {
+    background: #0d625b;
+    transform: translateY(-1px);
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-box {
+    padding: 42px 20px;
+
+    text-align: center;
+
+    border: 1px dashed #d7dee8;
+    border-radius: 11px;
+
+    background: #fafbfd;
+}
+
+.empty-box div {
+    margin-bottom: 9px;
+    font-size: 34px;
+}
+
+.empty-box h3 {
+    margin: 0 0 5px;
+
+    color: #334155;
+    font-size: 15px;
+}
+
+.empty-box p {
+    margin: 0;
+
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.exam-table {
+    width: 100%;
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+.exam-table thead {
+    background: #f8fafc;
+}
+
+.exam-table th {
+    padding: 13px 14px;
+
+    border-bottom: 1px solid #e4e9f0;
+
+    color: #64748b;
+
+    text-align: left;
+
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.exam-table td {
+    padding: 15px 14px;
+
+    border-bottom: 1px solid #edf1f5;
+
+    color: #475569;
+
+    font-size: 13px;
+}
+
+.exam-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.exam-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.exam-table td strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* =====================================================
+   DEPARTMENT BADGE
+===================================================== */
+
+.dept-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.action-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+
+    padding: 7px 11px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.15s ease;
+}
+
+.edit-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.edit-btn:hover {
+    background: #dbeafe;
+}
+
+.delete-btn {
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #ffe4e6;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .exam-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .examinations-page {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .examinations-page {
+        padding: 20px;
+    }
+
+    .exam-topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .exam-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .today-exam-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .allocate-btn {
+        width: 100%;
+    }
+}

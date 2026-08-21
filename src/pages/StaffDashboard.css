@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+.staff-dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #f5f7fb;
+}
+
+/* SIDEBAR */
+
+.staff-sidebar {
+    width: 245px;
+    min-height: 100vh;
+
+    background: #172554;
+
+    padding: 30px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-logo {
+    color: white;
+    font-size: 26px;
+    font-weight: 800;
+
+    padding: 0 15px;
+    margin-bottom: 45px;
+}
+
+.staff-logo span {
+    color: #60a5fa;
+}
+
+.staff-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.staff-nav {
+    border: none;
+    background: transparent;
+
+    color: #cbd5e1;
+
+    text-align: left;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.staff-nav:hover,
+.staff-nav.active {
+    background: #2563eb;
+    color: white;
+}
+
+.staff-logout {
+    margin-top: auto;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #e2e8f0;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+/* MAIN */
+
+.staff-main {
+    flex: 1;
+
+    padding: 35px 50px;
+}
+
+/* TOPBAR */
+
+.staff-topbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.staff-topbar h1 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+.staff-topbar p {
+    margin: 6px 0 0;
+
+    color: #8a94a6;
+
+    font-size: 13px;
+}
+
+.staff-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 18px;
+
+    border-left: 3px solid #2563eb;
+}
+
+.staff-profile strong,
+.staff-profile small {
+    display: block;
+}
+
+.staff-profile strong {
+    font-size: 13px;
+}
+
+.staff-profile small {
+    color: #8a94a6;
+
+    margin-top: 3px;
+
+    font-size: 11px;
+}
+
+.staff-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* WELCOME */
+
+.staff-welcome {
+    padding: 30px 0 20px;
+}
+
+.staff-welcome span {
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.staff-welcome h2 {
+    margin: 8px 0;
+
+    font-size: 25px;
+}
+
+.staff-welcome p {
+    margin: 0;
+
+    color: #7b8494;
+
+    font-size: 13px;
+}
+
+/* STATS */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.stat-card {
+    background: white;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 11px;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+.stat-card span {
+    display: block;
+
+    color: #8a94a6;
+
+    font-size: 11px;
+}
+
+.stat-card strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 22px;
+}
+
+/* SECTION */
+
+.staff-section {
+    background: white;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 16px;
+
+    padding: 28px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 7px 25px rgba(15, 23, 42, 0.04);
+}
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.section-heading>div>span {
+    color: #8a94a6;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+.section-heading h2 {
+    margin: 7px 0 0;
+
+    font-size: 19px;
+}
+
+.exam-status {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+/* EXAM DETAILS */
+
+.exam-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.exam-details div {
+    background: #f8fafc;
+
+    padding: 16px;
+
+    border-radius: 10px;
+}
+
+.exam-details span {
+    display: block;
+
+    color: #8a94a6;
+
+    font-size: 10px;
+
+    margin-bottom: 7px;
+}
+
+.exam-details strong {
+    font-size: 13px;
+}
+
+/* QUICK ACTIONS */
+
+.quick-title {
+    margin: 0 0 18px;
+
+    font-size: 18px;
+}
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.action-card {
+    border: 1px solid #e7ebf1;
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.action-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.action-card>div {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-card h3 {
+    margin: 0 0 5px;
+
+    font-size: 14px;
+}
+
+.action-card p {
+    margin: 0;
+
+    color: #8a94a6;
+
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .exam-details {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .staff-sidebar {
+        width: 70px;
+        padding: 20px 10px;
+    }
+
+    .staff-logo {
+        font-size: 0;
+        text-align: center;
+    }
+
+    .staff-nav {
+        font-size: 0;
+        text-align: center;
+    }
+
+    .staff-logout {
+        font-size: 0;
+    }
+
+    .staff-main {
+        padding: 20px;
+    }
+
+    .staff-profile {
+        display: none;
+    }
+
+    .stats-grid,
+    .exam-details,
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+}
